@@ -5,10 +5,7 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-}
-
-img {
-  max-width: 100%;
+  list-style: none;
 }
 
 :root {
@@ -35,14 +32,14 @@ img {
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: var(--color-grey-5);
 }
 
 .container {
-  width: 76rem;
+
   max-width: 100%;
   margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+ 
 }
 
 @media(max-width: 991px){

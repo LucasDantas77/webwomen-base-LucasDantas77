@@ -1,0 +1,237 @@
+.topo__pagina {
+    width: 100vw;
+    height: 600px;
+    max-height: 795px;
+    max-width: 1347px;
+    background: rgba(0, 0, 0, 0.7);
+
+}
+
+.topo__pagina>img {
+    width: 100vw;
+    opacity: 0.3;
+    max-width: 1347px;
+    max-height: 600px;
+    object-fit: cover;
+
+}
+
+.informacoes {
+    margin-left: 1rem;
+    position: relative;
+    bottom: 600px;
+    display: flex;
+    gap: 4rem;
+    flex-direction: column;
+    width: 90%;
+    max-width: 700px;
+
+}
+
+.informacoes>h1 {
+    color: var(--color-grey-6);
+
+}
+
+.informacoes>h2 {
+    color: var(--color-grey-6);
+}
+
+.informacoes>p {
+    color: var(--color-grey-6);
+    font-size: 0.8rem;
+}
+
+#textoDirecionado {
+    font-weight: 500;
+}
+
+.informacoes>button {
+    background-color: var(--color-brand-2);
+    border: 2px solid var(--color-brand-2);
+    border-radius: 8px;
+    padding: 7px;
+    width: 80%;
+    max-width: 200px;
+}
+
+.divisao__container {
+    width: 100vw;
+    height: 100vh;
+    max-width: 1347px;
+}
+
+
+.secao__cards {
+    margin-left: 1.5rem;
+
+}
+
+.secao__cards>h2 {
+    line-height: 100px;
+    font-size: var(--title-5);
+    
+}
+
+.container__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 90%;
+    max-width: 700px;
+    margin: 0 0 1rem;
+   
+
+}
+
+.lista__cards{
+    padding: 20px;
+    align-items: flex-start;
+    border-radius: 8px;
+    background-color: var(--color-grey-6);
+
+}
+
+.div__infos{
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.div__infos>p {
+    font-weight: 400;
+    font-size: var(--text-3);
+    line-height: 32px;
+}
+
+.div__infos>h3 {
+    font-size: 15px;
+}
+
+.div__infos>span {
+    font-size: 11px;
+    border: solid var(--color-grey-3);
+    background-color: var(--color-grey-3);
+    width: 40%;
+    max-width: 80px;
+    border-radius: 4px;
+    text-align: center;
+    margin-left: 0.6rem
+}
+
+.div__infos>button {
+    width: 80%;
+    max-width: 150px;
+    background-color: var(--color-brand-1);
+    border: 1px solid var(--color-brand-1);
+    border-radius: 4px;
+    color: var(--color-grey-6);
+    margin: 0 0 1rem 0.6rem;
+    padding: 4px;
+
+}
+
+.div__info {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    
+}
+
+.div__info>span {
+    font-size: 11px;
+}
+
+.secao__aside {
+    width: 83%;
+    max-width: 300px;
+    max-height: 260px;
+    margin-left: 1rem;
+    border-radius: 4px;
+}
+
+
+.container__carrinho {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 400px;
+    margin-left: 0.5rem;
+    background-color: var(--color-grey-6);
+    
+}
+
+.container__carrinho>h2 {
+    font-weight: 600;
+    font-size: var(--title-5);
+    line-height: 65px;
+    margin-left: 1rem;
+    
+
+}
+
+.carrinho__vagas {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    gap: 1rem;
+    width: 70%;
+    max-width: 400px;
+    border-bottom: 2px solid var(--color-grey-5);
+
+}
+
+.carrinho__vagas>h3 {
+    font-size: var(--text-3);
+}
+
+.carrinho__vagas>button {
+    position: absolute;
+    right: 70px;
+    width: 6%;
+    height: 5%;
+    border: none;
+    border-radius: 4px;
+}
+
+#imgLixo {
+    width: 60%;
+    height: 40%;
+}
+
+@media(min-width:768px) {
+    .divisao__container {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .secao__aside{
+        margin: 6.3rem 10rem 0 0;
+        
+    }
+
+    .secao__cards{
+        margin-left: 5rem;
+    }
+
+    .carrinho__vagas>button {
+        position: absolute;
+        right: 180px;
+        width: 20px;
+        height: 25px;
+        border: none;
+        border-radius: 4px;
+    }
+    
+    #imgLixo {
+        width: 15px;
+        height: 15px;
+    }
+
+    .informacoes {
+        margin-left: 3rem;
+    }
+}
