@@ -15,7 +15,7 @@ function renderVagas(array) {
         const spanHome = document.createElement("span")
         const botaoCandidatar = document.createElement("button")
 
-       liVagas.id = element.id
+        liVagas.id = element.id
         h3Cargo.innerText = element.title
         spanFormacao.innerText = element.enterprise
         spanLocal.innerText = element.location
@@ -23,22 +23,33 @@ function renderVagas(array) {
         spanHome.innerText = element.modalities
         botaoCandidatar.classList.add("candidatar")
         botaoCandidatar.id = element.id
-        botaoCandidatar.addEventListener("click", ()=>{
+        const verificarCandidato = newVaga.findIndex((vagas) => {
+            return vagas.id == element.id
+        })
+        if (verificarCandidato !== -1) {
             botaoCandidatar.classList.toggle("candidatar")
             botaoCandidatar.classList.toggle("remover")
-            
-        })
-        botaoCandidatar.addEventListener("click", (event) => {
-            let btnCandidatar = event.target.id
-            let vagas = jobsData.find(vaga => {
-                return vaga.id == btnCandidatar
+            botaoCandidatar.addEventListener("click", () => {
+                newVaga.splice(verificarCandidato, 1)
+                ul.innerHTML = ""
+                renderVagas(jobsData)
+                renderCarrinhosVagas(newVaga)
             })
-           
-           newVaga.push(vagas)
-            renderCarrinhosVagas(newVaga)
+        } else {
+            botaoCandidatar.addEventListener("click", () => {
+
+                newVaga.push(element)
+
+                renderCarrinhosVagas(newVaga)
+
+                ul.innerHTML = ""
+
+                renderVagas(jobsData)
+            })
+
+        }
 
 
-        })
 
         liVagas.classList.add("lista__cards")
         divInfos.classList.add("div__infos")
@@ -54,6 +65,9 @@ function renderVagas(array) {
 renderVagas(jobsData)
 
 function renderCarrinhosVagas(array) {
+    ulCarrinho.innerHTML = ""
+    console.log(array)
+
     array.forEach((element) => {
         const liCarrinho = document.createElement("li")
 
@@ -70,14 +84,17 @@ function renderCarrinhosVagas(array) {
 
         liCarrinho.id = element.id
         botaoRemoveCarrinho.id = element.id
-        botaoRemoveCarrinho.addEventListener("click", (event) => {
+        botaoRemoveCarrinho.addEventListener("click", () => {
 
-            let removeVaga = jobsData.find(({
+            let removeVaga = newVaga.find(({
                 vaga
-            }) => vaga == jobsData)
-            jobsData.splice(removeVaga, 1)
+            }) => vaga == newVaga)
+            newVaga.splice(removeVaga, 1)
 
-            liCarrinho.remove()
+            ul.innerHTML = ""
+            renderVagas(jobsData)
+
+            renderCarrinhosVagas(newVaga)
         })
 
         h3CargoCarrinho.innerText = element.title
@@ -92,4 +109,3 @@ function renderCarrinhosVagas(array) {
         ulCarrinho.append(liCarrinho)
     })
 }
-renderCarrinhosVagas(jobsData)
