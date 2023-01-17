@@ -4,7 +4,7 @@
     max-height: 795px;
     max-width: 1347px;
     background: rgba(0, 0, 0, 0.7);
- 
+
 
 
 }
@@ -15,7 +15,7 @@
     max-width: 1347px;
     max-height: 600px;
     object-fit: cover;
-   
+
 }
 
 .informacoes {
@@ -72,7 +72,7 @@
 .secao__cards>h2 {
     line-height: 100px;
     font-size: var(--title-5);
-    
+
 }
 
 .container__lista {
@@ -82,11 +82,11 @@
     width: 90%;
     max-width: 700px;
     margin: 0 0 1rem;
-   
+
 
 }
 
-.lista__cards{
+.lista__cards {
     padding: 20px;
     align-items: flex-start;
     border-radius: 8px;
@@ -94,7 +94,7 @@
 
 }
 
-.div__infos{
+.div__infos {
     margin-left: 1rem;
     display: flex;
     flex-direction: column;
@@ -138,7 +138,7 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
-    
+
 }
 
 .div__info>span {
@@ -146,13 +146,14 @@
 }
 
 .secao__aside {
-    width: 83%;
+    width: 80%;
     max-width: 300px;
     max-height: 260px;
     margin-left: 1rem;
     background-color: var(--color-grey-6);
     border-radius: 8px;
-  
+    overflow-y: scroll;
+
 }
 
 .secao__aside>h2 {
@@ -162,7 +163,7 @@
     margin-left: 3.1rem;
 }
 
-.secao__aside>p{
+.secao__aside>p {
     margin: 3.6rem 0 0 2.1rem;
 
 }
@@ -172,9 +173,11 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: 100%;
+    width: 98%;
+    height: 100%;
     max-width: 400px;
-    margin-left: 0.5rem;  
+    margin-left: 0.5rem;
+
 }
 
 .carrinho__vagas {
@@ -183,7 +186,7 @@
     margin-left: 1rem;
     gap: 1rem;
     width: 70%;
-    max-width: 400px;
+    max-width: 350px;
     border-bottom: 2px solid var(--color-grey-5);
 
 }
@@ -193,8 +196,9 @@
 }
 
 .carrinho__vagas>button {
-    position: absolute;
-    right: 70px;
+    position: relative;
+    left: 195px;
+    bottom: 70px;
     width: 6%;
     height: 5%;
     border: none;
@@ -206,11 +210,11 @@
     height: 40%;
 }
 
-.candidatar:before{
+.candidatar:before {
     content: "Candidatar";
 }
 
-.remover:before{
+.remover:before {
     content: "Remover candidatura";
 }
 
@@ -222,27 +226,26 @@
 
     }
 
-    .secao__aside{
+    .secao__aside {
         margin: 6.3rem 10rem 0 0;
         position: sticky;
         top: 100px;
         right: 200px;
-        
+
     }
 
-    .secao__cards{
+    .secao__cards {
         margin-left: 5rem;
     }
 
     .carrinho__vagas>button {
-        position: absolute;
-        right: 35px;
+        position: relative;
         width: 20px;
         height: 25px;
         border: none;
         border-radius: 4px;
     }
-    
+
     #imgLixo {
         width: 15px;
         height: 15px;
